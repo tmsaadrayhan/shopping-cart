@@ -16,5 +16,18 @@ function handleNumber(countId, inputId, multiplier, countAmount){
         document.getElementById("amount").innerText= price + countAmount;
         document.getElementById("vat").innerText= (price + countAmount)*2/100;
         document.getElementById("total").innerText= (price + countAmount) + (price + countAmount)*2/100;
+        const phoneDisplay= document.getElementById("phoneDisplay");
+        const caseDisplay= document.getElementById("caseDisplay");
+        display(phoneInput, phoneDisplay);
+        display(caseInput, caseDisplay);
+        function display(inputId, displayId) {
+            if(parseFloat(inputId.value) < 1) {
+                displayId.style.display= "none";
+            }
+            else{
+                displayId.style.display= "block";
+            }
+        }
     });
 }
+
