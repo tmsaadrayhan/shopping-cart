@@ -16,9 +16,9 @@ function handleNumber(countId, itemTotal, inputId, multiplier, countAmount){
         inputId.value= (parseFloat(inputId.value))+(multiplier);
         const price= parseFloat(document.getElementById("amount").innerText);
         itemTotal.innerText= countAmount*(parseFloat(inputId.value));
-        document.getElementById("amount").innerText= price + countAmount;
+        document.getElementById("amount").innerText= price + multiplier*countAmount;
         document.getElementById("vat").innerText= (price + multiplier*countAmount)*2/100;
-        document.getElementById("total").innerText= (price + countAmount) + (price + multiplier*countAmount)*2/100;
+        document.getElementById("total").innerText= (price + multiplier*countAmount) + (price + multiplier*countAmount)*2/100;
         const phoneDisplay= document.getElementById("phoneDisplay");
         const caseDisplay= document.getElementById("caseDisplay");
         display(phoneInput, phoneDisplay);
